@@ -1,0 +1,8 @@
+theme:      "white"
+transition: "zoom"
+author:     "Andrés Pérez-Figueroa"
+title:      "Seminar 16422"
+revealjs_config:
+    autoSlide: 0
+    showNotes: false
+    controls: false
