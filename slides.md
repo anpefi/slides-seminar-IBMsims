@@ -146,3 +146,6 @@ Follow this link for a list of references for this talk: [http://bit.ly/1TmtseB]
 ---
 #### Thanks for coming
 <img src="images/drift.jpg" alt="Schema of ABM simulation in cancer" width="40%"  style="border: none; shadow: none;">
+
+---
+Presentation made with reveal.js. Get source at: [https://github.com/anpefi/slides-seminar-IBMsims](https://github.com/anpefi/slides-seminar-IBMsims)
