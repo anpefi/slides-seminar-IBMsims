@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+<title>Seminar 16422</title>
+
+<meta name="description" content="">
+<meta name="author" content="Andrés Pérez-Figueroa">
+<meta name="generator" content="reveal-ck 3.3.0">
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+<link rel="stylesheet" href="css/reveal.css">
+<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+<!-- Code syntax highlighting -->
+<link rel="stylesheet" href="lib/css/zenburn.css">
+
+<link rel="stylesheet" href="css/reveal-ck.css">
+
+
+<!-- Printing and PDF exports -->
+<script>
+  var link = document.createElement( 'link' );
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+  document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
+
+<!--[if lt IE 9]>
+<script src="lib/js/html5shiv.js"></script>
+<![endif]-->
+
+  </head>
+
+  <body>
+    <div class="reveal">
+  <!-- Any section element inside of this container is displayed as a slide -->
+  <div class="slides">
+    <section>
+
+<h2>An Overview of Individual-based Simulations in Population Genetics and Cancer</h2>
+
+<p><br><br>
+<strong>Andrés Pérez-Figueroa</strong> <a href="http:anpefi.eu">(@anpefi)</a>
+<br>
+<em>Lab seminar</em>
+<br>
+22 April 2016
+<br>
+<br>
+<img src="images/phylogenomicslogo.jpg" alt="Phylogenomics Logo" width="30%" style="border: none; shadow: none;"></p>
+
+</section>
+<section>
+
+<h2>GOALS</h2>
+
+<ul>
+<li>Understand what is a simulation</li>
+<li>Learn how to build an Agent Based Model</li>
+<li>Explore how Agent Based Models had been used in cancer research</li>
+</ul>
+
+</section>
+<section>
+
+<h3>What is a (computer) simulation?</h3>
+
+<ul>
+<li>An attempt to mimic a real-world empirical system</li>
+<li>The creation <em>in silico</em> of a possible world using computer programs to represent the processes under consideration</li>
+</ul>
+
+</section>
+<section>
+
+<h3>Simulations as experimental systems</h3>
+
+<ul>
+<li>Models could be as complex as the real systems they mimic</li>
+<li>A huge advantage: <strong>models are strongly manipulable</strong>
+</li>
+<li>Simulation models are properly explored using the same experimental and statistical techniques that are used to explore real-world systems</li>
+</ul>
+
+</section>
+<section>
+
+<h3>genetic data simulation algorithms</h3>
+
+<ul>
+<li>Backward-time (Coalescent)</li>
+<li><strong>Fordward-time</strong></li>
+<li>Resampling</li>
+</ul>
+
+</section>
+<section>
+
+<h3>Individual/Agent Based Models (IBMs/ABMs)</h3>
+
+<ul>
+<li>Simulation models describing individual organisms (agents)</li>
+<li>How system level properties emerge from the adaptive behaviour of individuals and how the system affects individuals</li>
+<li>Aspects usually ignored in analytical models: individuals variability, local interactions, life cycles, ...</li>
+<li>More complex in structure than analytical models and then more difficult to analyze, understand and communicate</li>
+</ul>
+<aside class="notes">
+</aside>
+</section>
+<section>
+
+<h3>Structure of an ABM</h3>
+
+<ol>
+<li>A set of agents, their attributes and behaviours.</li>
+<li>A set of agent relationships and methods of interaction:
+An underlying topology of connectedness defines how
+and with whom agents interact.</li>
+<li>The agents’ environment: Agents interact with their
+environment in addition to other agents.
+<br>
+<br>
+<br>
+Agents repeatedly and discretly execute their behaviours and interactions.</li>
+</ol>
+<aside class="notes">To run an agent-based model is to have agents repeatedly execute their
+behaviours and interactions. This process often does, but is not necessarily
+modelled to, operate over a timeline, as in time-stepped, activity-based,
+or discrete-event simulation structures.
+</aside>
+</section>
+<section>
+
+<h3>Building a simulation study</h3>
+
+<p><img src="images/simulations.flowchart.png" alt="Flowchart" width="60%" style="border: none; shadow: none;"></p>
+
+</section>
+<section>
+
+<h3>Some Population Genetics simulators</h3>
+
+<p><img src="images/Genetic.Simulators.png" alt="Simulators matrix" width="60%" style="border: none; shadow: none;"></p>
+
+</section>
+<section>
+
+<h3>An old example (from my Thesis)</h3>
+
+<p><img src="images/Litto.png" alt="Littorina" width="40%" style="border: none; shadow: none;"><img src="images/littosims.png" alt="Squema" width="37%" style="border: none; shadow: none;"></p>
+
+</section>
+<section>
+
+<h3>ABMs in cancer research</h3>
+
+<ul>
+<li>Tumor growth</li>
+<li>Phenotypes</li>
+<li>Dynamics of mutation accumulation</li>
+<li>Mostly deterministic laws (PDE)</li>
+</ul>
+
+</section>
+<section>
+
+<h4>examples ABM in cancer</h4>
+
+<p><img src="images/ABM.cancer.png" alt="Schema of ABM simulation in cancer" width="55%" style="border: none; shadow: none;"></p>
+
+</section>
+<section>
+
+<h4>examples ABM in cancer</h4>
+
+<p><img src="images/offLattice.png" alt="Schema of ABM simulation in cancer" width="45%" style="border: none; shadow: none;">  <img src="images/crypts.png" alt="Schema of ABM simulation in cancer" width="45%" style="border: none; shadow: none;"></p>
+
+</section>
+<section>
+
+<h3>Enderling 2014 (CSC)</h3>
+
+<p><img src="images/Enderling.png" alt="Schema of ABM simulation in cancer" width="62%" style="border: none; shadow: none;"></p>
+
+</section>
+<section>
+
+<h3>Sottoriva 2015 (Big Bang in CRC)</h3>
+
+<ul>
+<li>Agents: Glands (8M -&gt; 80 billion cells)</li>
+<li>Growth by fission (variable rates), occurrence of CNAs and mutations</li>
+<li>All cells in a gland same fitness (survival and growth)</li>
+<li>Parameters: mutation rate and fitness change</li>
+<li>Not modeled: cellular migration, apoptosis within a gland, the contribution of the surrounding normal tissue or angiogenic factors.</li>
+</ul>
+<aside class="notes">
+</aside>
+</section>
+<section>
+
+<h3>Sottoriva 2015 (Big Bang in CRC)</h3>
+
+<ul>
+<li>400x400x400 lattice</li>
+<li>Starting from a single gland until 80M reached</li>
+<li>Sampling regions</li>
+<li>ABC to fit observed data</li>
+</ul>
+
+</section>
+<section>
+
+<h3>Sottoriva 2015 (Big Bang in CRC)</h3>
+
+<p><img src="images/sottoriva2016a.png" alt="Schema of ABM simulation in cancer" width="100%" style="border: none; shadow: none;"></p>
+
+</section>
+<section>
+
+<h3>Sottoriva 2015 (Big Bang in CRC)</h3>
+
+<ul>
+<li>Neutral clone
+<img src="images/sottoriva2016b.png" alt="Schema of ABM simulation in cancer" width="100%" style="border: none; shadow: none;">
+</li>
+</ul>
+
+</section>
+<section>
+
+<h3>Our interests</h3>
+
+<ul>
+<li>Final goal is to do a general simulator of intratumoral pop gen.</li>
+<li>Start with a simple model, including selection and genealogy of all the alleles/clones</li>
+<li>Define and separate fitness traits (proliferation speed, growth speed, adhesion)</li>
+<li>Different set of genes/mutations for different traits (pleiotropy?)</li>
+</ul>
+
+</section>
+<section>
+
+<h3>Limitations</h3>
+
+<ul>
+<li>Huge computational cost of ABMs</li>
+<li>Limited number of agents or time units</li>
+<li>Reduced genome representation</li>
+</ul>
+
+</section>
+<section>
+
+<h3>Further readings</h3>
+
+<p>Follow this link for a list of references for this talk: <a href="http://bit.ly/1TmtseB">http://bit.ly/1TmtseB</a></p>
+
+</section>
+<section>
+
+<h4>Thanks for coming</h4>
+
+<p><img src="images/drift.jpg" alt="Schema of ABM simulation in cancer" width="40%" style="border: none; shadow: none;"></p>
+
+</section>
+
+  </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+  (function() {
+  function extend( a, b ) {
+    for(var i in b) {
+      a[i] = b[i];
+    }
+  }
+  var baseOptions = {
+    transition: 'zoom',
+
+    dependencies: [
+      { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: 'plugin/zoom-js/zoom.js', async: true },
+      { src: 'plugin/notes/notes.js', async: true }
+    ]
+  };
+  var configOptions = {"autoSlide":0,"showNotes":false,"controls":false}
+  var initializeOptions = {};
+  extend(initializeOptions, baseOptions);
+  extend(initializeOptions, configOptions);
+  Reveal.initialize(initializeOptions);
+})();
+
+</script>
+
+  </body>
+</html>
